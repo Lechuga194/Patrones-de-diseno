@@ -1,3 +1,5 @@
+package proxy;
+
 import java.util.Hashtable;
 import java.util.Scanner;
 

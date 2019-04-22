@@ -1,3 +1,5 @@
+package proxy;
+
 import java.io.Serializable;
 
 public class CajeroProxy implements Serializable, InterfazCajero {

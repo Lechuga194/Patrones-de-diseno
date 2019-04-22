@@ -1,3 +1,5 @@
+package proxy;
+
 /**
  * Interfaz que maneja a cajero y cajero proxy
  */

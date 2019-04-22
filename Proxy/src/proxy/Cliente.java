@@ -1,3 +1,5 @@
+package proxy;
+
 public class Cliente {
 
     public int cuenta;
