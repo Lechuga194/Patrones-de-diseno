@@ -28,6 +28,23 @@ public class Banco {
         clientes.put(c2.getCuenta(), c2);
         clientes.put(c3.getCuenta(), c3);
 
+        System.out.println("Pulse 1 para crear cuenta o 2 para acceder con una existente");
+        cuenta = sc.nextInt();
+
+        if(cuenta == 1){
+            int cuentaTemp;
+            int pinTemp;
+            double dineroTemp;
+            System.out.println("Introduce un numero de cuenta");
+            cuentaTemp = sc.nextInt();
+            System.out.println("Introduce tu PIN en digitos");
+            pinTemp = sc.nextInt();
+            System.out.println("Cuanto dinero tienes?");
+            dineroTemp = sc.nextDouble();
+            Cliente nc = new Cliente(cuentaTemp,pinTemp,dineroTemp);
+            clientes.put(nc.getCuenta(), nc);
+        }
+
         System.out.println("Introduce tu numero de cuenta");
         cuenta = sc.nextInt();
 
@@ -39,6 +56,7 @@ public class Banco {
                 System.out.println("Tu saldo es de: " + dummy.getSaldo() + " \nIntroduce la cantidad a retirar");
                 monto = sc.nextDouble();
                 cajeroProxy.retirarDinero(dummy, monto);
+                System.out.println("Tu nuevo saldo es de: " + dummy.getSaldo() + "\nHasta luego");
             } else {
                 System.out.println("Pin incorrecto");
                 this.iniciaOperacion();
